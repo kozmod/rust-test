@@ -9,6 +9,7 @@ edition = "2018"
 [dependencies]
 chrono = "0.4"
 futures = "0.3"
+clap = "2.33"
 
 [dependencies.async-std]
 version = "1.9"
