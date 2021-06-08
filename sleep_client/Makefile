@@ -6,3 +6,6 @@ docker:
 
 docker.rmi.builder:
 	docker image prune --filter label=stage=builder <<< y
+
+clean:
+	cargo clean
