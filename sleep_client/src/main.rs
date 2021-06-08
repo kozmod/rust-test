@@ -27,12 +27,12 @@ async fn main() {
         None => port = Some("8080"),
         Some(s) => {
             match s.parse::<i32>() {
-                Ok(p) => println!("Server started on port :{}", p),
-                Err(_) => println!("port value is not valid {}", s),
+                Ok(_) => {}
+                Err(err) => println!("port value is not valid {}. Error {}", s, err),
             }
         }
     }
-
+    println!("Server started on port :{}", port.unwrap());
     let listener = TcpListener::bind(["0.0.0.0", ":", port.unwrap()].join("")).await.unwrap();
     listener
         .incoming()
