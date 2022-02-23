@@ -1,6 +1,8 @@
 #[allow(dead_code)]
 #[cfg(test)]
 mod tests {
+
+    #[derive(Debug)]
     enum Direction {
         UP,
         DOWN,
@@ -17,5 +19,11 @@ mod tests {
             Direction::LEFT => println!("Left"),
             Direction::RIGHT => println!("Right"),
         }
+    }
+
+    #[test]
+    fn derive() {
+        let some_enum = Direction::UP;
+        println!("{:?}", some_enum)
     }
 }

@@ -11,4 +11,20 @@ mod tests {
 
         println!("{}", res);
     }
+
+    fn print_it(data: &str) {
+        println!("{:?}", data);
+    }
+
+    #[test]
+    fn strings() {
+        print_it("string slice");
+
+        let owned_str = "owned string".to_owned();
+        print_it(&owned_str);
+
+        let other_owned_str = String::from("other owned string");
+        print_it(&other_owned_str);
+    }
+
 }

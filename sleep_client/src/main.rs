@@ -52,7 +52,7 @@ async fn handle_connection(mut stream: TcpStream) {
     let header = String::from("HTTP/1.1 200 OK\r\n\r\n");
     let time: DateTime<Utc> = SystemTime::now().into();
     let response = format!("{}{:?}", header, time);
-
+    time.to_string()
     stream.write(response.as_bytes()).await.unwrap();
     stream.flush().await.unwrap();
 }

@@ -3,4 +3,5 @@ mod strings;
 mod structs;
 mod tuples;
 mod expression;
+mod vector;
 
