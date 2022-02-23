@@ -1,14 +1,13 @@
 #[allow(dead_code)]
 #[cfg(test)]
 mod tests {
-
     #[derive(Debug)]
     enum Direction {
         UP,
         DOWN,
         LEFT,
         RIGHT,
-        CUSTOM(i32)
+        CUSTOM(i32),
     }
 
     #[test]
@@ -19,7 +18,7 @@ mod tests {
             Direction::DOWN => println!("Down"),
             Direction::LEFT => println!("Left"),
             Direction::RIGHT => println!("Right"),
-            _ => println!("Other"),
+            other => println!("{:?}", other),
         }
     }
 
@@ -36,6 +35,4 @@ mod tests {
             _ => println!("Other"),
         }
     }
-
-
 }
