@@ -8,6 +8,7 @@ mod tests {
         DOWN,
         LEFT,
         RIGHT,
+        CUSTOM(i32)
     }
 
     #[test]
@@ -18,12 +19,23 @@ mod tests {
             Direction::DOWN => println!("Down"),
             Direction::LEFT => println!("Left"),
             Direction::RIGHT => println!("Right"),
+            _ => println!("Other"),
         }
     }
 
     #[test]
-    fn derive() {
-        let some_enum = Direction::UP;
-        println!("{:?}", some_enum)
+    fn match_enum_custom() {
+        let some_enum = Direction::CUSTOM(33);
+        match some_enum {
+            Direction::CUSTOM(11) => println!("c11"),
+            Direction::CUSTOM(33) => println!("c33"),
+            Direction::UP => println!("Up"),
+            Direction::DOWN => println!("Down"),
+            Direction::LEFT => println!("Left"),
+            Direction::RIGHT => println!("Right"),
+            _ => println!("Other"),
+        }
     }
+
+
 }
