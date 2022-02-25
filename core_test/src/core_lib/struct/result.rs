@@ -59,6 +59,7 @@ mod result_tests_v1 {
         Ok(())
     }
 
+    #[allow(unused_must_use)]
     #[test]
     fn result_question_mark() {
        let job = Job {
