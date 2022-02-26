@@ -1,4 +1,4 @@
-mod enum_test;
+mod r#enum;
 mod strings;
 mod structs;
 mod tuples;

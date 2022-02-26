@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[cfg(test)]
-mod tests {
+mod struct_tests {
     use core::fmt;
 
     #[derive(Debug)]

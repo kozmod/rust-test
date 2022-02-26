@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[cfg(test)]
-mod tests {
+mod match_tests {
     #[derive(Debug)]
     struct Data {
         val: String,

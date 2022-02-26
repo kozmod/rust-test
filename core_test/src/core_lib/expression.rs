@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[cfg(test)]
-mod tests {
+mod expression_tests {
 
     #[test]
     fn simple_expression() {

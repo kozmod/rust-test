@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[cfg(test)]
-mod tests {
+mod derive_tests {
     #[derive(Debug, Clone, Copy)]
     enum Direction {
         UP,

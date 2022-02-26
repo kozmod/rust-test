@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[cfg(test)]
-mod tests {
+mod vec_tests {
 
     #[test]
     fn vec() {

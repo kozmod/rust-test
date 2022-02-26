@@ -1,5 +1,5 @@
 #[cfg(test)]
-mod tests {
+mod strings_tests {
     #[test]
     fn string_concat() {
         let x = "hello";
