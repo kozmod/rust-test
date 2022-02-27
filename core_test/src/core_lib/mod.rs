@@ -6,4 +6,5 @@ mod expression;
 mod derive;
 mod r#match;
 mod r#struct;
+mod range;
 
