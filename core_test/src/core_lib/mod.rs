@@ -8,4 +8,5 @@ mod r#match;
 mod r#struct;
 mod range;
 mod r#trait;
+mod r#let;
 
