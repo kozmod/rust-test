@@ -15,5 +15,6 @@ edition = "2018"
 [workspace]
 members = [
     "core_test",
-    "sleep_client"
+    "sleep_client",
+    "algorithm"
 ]
