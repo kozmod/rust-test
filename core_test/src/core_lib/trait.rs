@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 #[cfg(test)]
 mod trait_tests {
     trait Fall {
@@ -46,5 +47,30 @@ mod trait_tests {
         let s = Some {};
         fall(s);
         stand_up(s);
+    }
+
+    #[derive(Debug, Copy, Clone)]
+    struct Package {
+        weight: i64,
+    }
+
+    impl Package {
+        fn new(w: i64) -> Self {
+            Self { weight: w }
+        }
+    }
+
+    impl Default for Package {
+        fn default() -> Self {
+            Self { weight: 3 }
+        }
+    }
+
+    #[test]
+    fn default_impl() {
+        let mut p  = Package::new(99);
+        dbg!(p);
+        p  = Package::default();
+        dbg!(p);
     }
 }
